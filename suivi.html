@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suivi réclamation - FactureChain</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- HEADER -->
+    <div class="header-reclamation">
+        <a href="dashboard.html" class="back-link">← Retour au dashboard</a>
+        <h2>Réclamation #RC-2025-00419</h2>
+        <p class="hash">Hash blockchain : 0x4f3a9b2c1e8d7f6a5b4c3d2e1f0a9b8c7d6e5f4a...</p>
+
+        <!-- TIMELINE HORIZONTALE -->
+        <div class="timeline-horizontal">
+            <div class="top-info">
+                <span>📄 Facture contestée : 23 400 FCFA</span>
+                <span>🔗 Montant blockchain : 18 700 FCFA</span>
+                <span>⚠️ Écart : 4 700 FCFA</span>
+            </div>
+            <div class="line">
+                <div class="line-green" style="width: 55%;"></div>
+            </div>
+            <div class="bottom-steps">
+                <span class="step-active">Soumise</span>
+                <span class="step-active">ENEO</span>
+                <span class="step-active">ARSEL</span>
+                <span>Résolue</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- STATUS GLOBAL -->
+    <div class="status status-pending">
+        ⏳ En cours de traitement - Transmise à ENEO
+    </div>
+
+    <!-- TIMELINE VERTICALE -->
+    <section class="timeline">
+        <h2>📌 Suivi détaillé du traitement</h2>
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+
+            <div class="timeline-item done">
+                <div class="dot"></div>
+                <div class="content">
+                    <h3>Réclamation soumise</h3>
+                    <p>15 juillet 2025 - 10:32</p>
+                    <span class="badge done">✓ Confirmé</span>
+                    <p class="tx-hash">Tx: 0x4f3a...e5f4a</p>
+                </div>
+            </div>
+
+            <div class="timeline-item done">
+                <div class="dot"></div>
+                <div class="content">
+                    <h3>Transmise à ENEO</h3>
+                    <p>15 juillet 2025 - 11:10</p>
+                    <span class="badge done">✓ Confirmé</span>
+                </div>
+            </div>
+
+            <div class="timeline-item pending">
+                <div class="dot"></div>
+                <div class="content">
+                    <h3>En attente de réponse ENEO</h3>
+                    <p>Délai légal : 15 jours ouvrés</p>
+                    <span class="badge pending">⏳ En cours</span>
+                </div>
+            </div>
+
+            <div class="timeline-item future">
+                <div class="dot"></div>
+                <div class="content">
+                    <h3>Résolution finale</h3>
+                    <p>Remboursement ou régularisation</p>
+                    <span class="badge future">⏱️ À venir</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATISTIQUES PUBLIQUES -->
+    <section class="zone-info">
+        <h3>📊 Anomalies signalées dans votre zone (Yaoundé - Mvog-Mbi)</h3>
+        <div class="stats">
+            <div class="stat-line">
+                <span>Réclamations actives</span>
+                <strong>47</strong>
+            </div>
+            <div class="stat-line">
+                <span>Surfacturation</span>
+                <strong>28</strong>
+            </div>
+            <div class="stat-line">
+                <span>Erreur de relevé</span>
+                <strong>12</strong>
+            </div>
+            <div class="stat-line">
+                <span>Contestations résolues ce mois</span>
+                <strong>35</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER INFO -->
+    <footer class="footer-info">
+        🔗 Ces données sont enregistrées sur blockchain Polygon et sont publiquement vérifiables.
+    </footer>
+</div>
+
+</body>
+</html>

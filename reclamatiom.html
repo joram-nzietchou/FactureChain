@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nouvelle réclamation - FactureChain</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="screen">
+    <!-- TOPBAR -->
+    <div class="topbar">
+        <div class="topbar-content">
+            <a href="dashboard.html" class="back-link">←</a>
+            <div>
+                <div class="topbar-title">Nouvelle réclamation</div>
+                <div class="topbar-sub">Facture de juillet 2025</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- STEPS -->
+    <div class="step-row">
+        <div class="step">
+            <div class="step-circle active">1</div>
+            <div class="step-label">Identification</div>
+        </div>
+        <div class="step-line active"></div>
+        <div class="step">
+            <div class="step-circle active">2</div>
+            <div class="step-label">Anomalies</div>
+        </div>
+        <div class="step-line active"></div>
+        <div class="step">
+            <div class="step-circle active">3</div>
+            <div class="step-label">Preuves</div>
+        </div>
+        <div class="step-line"></div>
+        <div class="step">
+            <div class="step-circle">4</div>
+            <div class="step-label">Confirmation</div>
+        </div>
+    </div>
+
+    <!-- FORM -->
+    <form id="reclamationForm" onsubmit="event.preventDefault(); soumettreReclamation();">
+        <!-- SECTION 1 - INFOS ABONNE -->
+        <div class="section-title">📋 INFORMATIONS DE L'ABONNÉ</div>
+        <div class="info-grid">
+            <div class="info-item">
+                <span>Numéro abonné</span>
+                <strong>CM-YDE-004821</strong>
+            </div>
+            <div class="info-item">
+                <span>Mois contesté</span>
+                <strong>Juillet 2025</strong>
+            </div>
+            <div class="info-item">
+                <span>Nom complet</span>
+                <strong>Jean-Baptiste Kamga</strong>
+            </div>
+            <div class="info-item">
+                <span>Email</span>
+                <strong>jean.kamga@email.com</strong>
+            </div>
+        </div>
+
+        <!-- SECTION 2 - ANOMALIE DETECTEE -->
+        <div class="section-title">⚠️ ANOMALIE DÉTECTÉE</div>
+        <div class="anomalie-banner">
+            <span class="badge-anomalie">Anomalie confirmée</span>
+        </div>
+        <table class="table-anomalie">
+            <tr>
+                <td class="label">Surfacturation détectée</td>
+                <td class="value">+25%</td>
+            </tr>
+            <tr>
+                <td class="label">Consommation blockchain</td>
+                <td class="value">18 700 kWh</td>
+            </tr>
+            <tr>
+                <td class="label">Montant facturé ENEO</td>
+                <td class="value">23 400 FCFA</td>
+            </tr>
+            <tr>
+                <td class="label">Différence constatée</td>
+                <td class="value highlight">4 700 FCFA</td>
+            </tr>
+        </table>
+
+        <!-- SECTION 3 - DESCRIPTION -->
+        <div class="section-title">📝 DESCRIPTION DU LITIGE</div>
+        <textarea class="field-input" placeholder="Décrivez votre situation...">Ma consommation est identique aux mois précédents (environ 14 000-15 000 kWh) mais la facture de juillet 2025 affiche 18 700 kWh. L'historique blockchain montre un écart de 4 700 FCFA. Je n'ai pas changé mes habitudes de consommation. Une vérification de mon compteur s'impose.</textarea>
+
+        <!-- SECTION 4 - PREUVE BLOCKCHAIN -->
+        <div class="section-title">🔗 PREUVE BLOCKCHAIN (infalsifiable)</div>
+        <div class="proof-box">
+            <strong>Transaction blockchain</strong><br>
+            <code>0x4f3a9b2c1e8d7f6a5b4c3d2e1f0a9b8c7d6e5f4a3b2c1d0e9f8a7b6c5d4e3f2a1b0c</code><br><br>
+            <strong>Horodatage :</strong> 16 Août 2025 — 09:42:17 UTC<br>
+            <strong>Réseau :</strong> Polygon (Matic)<br>
+            <strong>Statut :</strong> ✅ Confirmé (32 confirmations)
+        </div>
+
+        <!-- BOUTON SOUMISSION -->
+        <button type="submit" class="submit-btn">Soumettre la réclamation</button>
+    </form>
+</div>
+
+<script>
+function soumettreReclamation() {
+    alert("✅ Votre réclamation a été enregistrée sur la blockchain !\n\nNuméro de suivi : RC-2025-00419\nUn email de confirmation vous a été envoyé.\n\nRedirection vers le suivi...");
+    window.location.href = "suivi.html";
+}
+</script>
+
+</body>
+</html>
